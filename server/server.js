@@ -3,7 +3,13 @@ const bodyParser = require('body-parser');
 const app = express();
 const cors = require('cors');
 const logger = require('morgan');
+const dotenv = require("dotenv");
+const connectDb = require("./config/connectDb");
 const PORT = process.env.PORT || 5000;
+dotenv.config();
+
+//database
+connectDb();
 
 //routes
 
